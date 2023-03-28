@@ -147,8 +147,8 @@ def AET(struc):
 
 def getElementsProperties():
 
-	elementsProperties = pd.read_excel("ElementsProperties-1.xlsx", sheet_name=0, index_col=None, header=0)
-	elements = pd.read_excel("ElementsProperties.xlsx", sheet_name=2, index_col=None, header = 0)
+	elementsProperties = pd.read_excel("ElementsProperties.xlsx", sheet_name=0, index_col=None, header=0)
+	elements = pd.read_excel("ElementsProperties.xlsx", sheet_name=1, index_col=None, header = 0)
 	elements = list(elements["element"])           
 	df = elementsProperties.loc[:,elements]        
 	df.dropna(axis=0, how='any', inplace=True)     
